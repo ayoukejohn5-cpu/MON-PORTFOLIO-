@@ -1,0 +1,197 @@
+/* --- Variables de couleur pour un design cohérent --- */
+:root {
+    --bg-color: #0d1117; /* Noir bleuté profond */
+    --card-bg: #161b22;  /* Couleur des cartes */
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --accent-color: #951e51; /* Bleu lumineux */
+    --whatsapp-green: #25d366;
+    --shadow-3d: 0 15px 35px rgba(0,0,0,0.5);
+    --neon-glow: 0 0 15px rgba(88, 166, 255, 0.4);
+}
+
+/* --- Base & Reset --- */
+body {body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    
+    /* --- COULEUR DE FOND BLANC --- */
+    background-color: #ffffff; 
+    
+    /* Couleur du texte en noir pour qu'on puisse lire sur le blanc */
+    color: #1a1a1a; 
+}
+}
+
+/* --- Navigation avec effet Frost (Flou de fond) --- */
+header {
+    background: rgb(41, 61, 73);
+    backdrop-filter: blur(10px); /* Effet de flou moderne */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f9fbfce1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span { color: var(--accent-color); }
+
+nav ul { display: flex; list-style: none; padding: 0; margin: 0; }
+nav ul li { margin: 0 15px; }
+nav ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+nav ul li a:hover { color: var(--accent-color); }
+
+/* --- Section Accueil "Hero" 3D --- */
+.hero {
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* Espace pour le header */
+}
+
+.profile-img-3d {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--card-bg); /* Sépare l'image de la lueur */
+}
+
+/* Effet de lueur supplémentaire */
+.glow-effect {
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.hero h1 { font-size: 3.5rem; margin: 10px 0; letter-spacing: -2px; }
+.subtitle { font-size: 1.2rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+.description { max-width: 600px; margin: 15px auto 40px; color: var(--text-secondary); }
+.description span { color: var(--accent-color); font-weight: 600; }
+
+/* --- Boutons Contact 3D avec Icônes --- */
+.contact-links-3d {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-3d {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(100, 93, 181, 0.811);
+}
+
+.btn-3d i { margin-right: 12px; font-size: 1.3rem; } /* Style des icônes */
+
+.btn-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white;
+}
+.btn-whatsapp:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+}
+
+.btn-call {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+.btn-call:hover {
+    background-color: rgba(88, 166, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* --- Section Réalisations (Grille 3D) --- */
+.container { padding: 100px 20px; max-width: 1100px; margin: auto; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Style des Cartes - Profondeur 3D */
+.card-3d {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation rebond */
+    box-shadow: var(--shadow-3d);
+}
+
+.card-3d:hover {
+    transform: translateY(-15px) rotateX(5deg) rotateY(5deg); /* Effet de rotation 3D */
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(88, 166, 255, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #30363d;
+}
+
+.card-info { padding: 25px; }
+.card-info h3 { color: var(--accent-color); margin: 0 0 10px 0; font-size: 1.4rem; }
+.card-info p { color: var(--text-secondary); margin: 0; font-size: 0.95rem; }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 60px;
+    background: #cbf534;
+    border-top: 1px solid #30363d;
+}
+
+/* --- Animations CSS --- */
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-15px); }
+    100% { transform: translatey(0px); }
+}
+
+/* --- Media Queries (Adaptation Mobile) --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .contact-links-3d { flex-direction: column; align-items: center; }
+    .grid { grid-template-columns: 1fr; }
+}
