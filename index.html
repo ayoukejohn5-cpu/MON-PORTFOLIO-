@@ -3,132 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plateforme d'Inscription Professionnelle</title>
+    <title>John Olivier | Expert IT Multiservices</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #2563eb; /* Bleu moderne */
-            --bg-color: #f8fafc;
-            --text-dark: #1e293b;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            width: 100%;
-            max-width: 450px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: var(--primary-color);
-            font-size: 24px;
-            margin: 0;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
-        }
-
-        button:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-1px);
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 13px;
-            color: #64748b;
-        }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; color: #333; }
+        header { background: #1a2a6c; color: white; padding: 60px 20px; text-align: center; }
+        .container { max-width: 1000px; margin: -50px auto 50px; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 40px; color: #1a2a6c; margin-bottom: 15px; }
+        .card h3 { margin: 10px 0; color: #1a2a6c; }
+        .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #1a2a6c; color: white; border-radius: 5px; text-decoration: none; }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <div class="header">
-        <i class="fas fa-user-plus" style="font-size: 40px; color: var(--primary-color); margin-bottom: 10px;"></i>
-        <h1>Formulaire d'Adhésion</h1>
-        <p>Veuillez remplir vos informations personnelles</p>
+<header>
+    <h1>AHISSAN JEAN OLIVIER</h1>
+    <p>Spécialiste Informatique | Maintenance | Développement | Design</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-tools"></i>
+            <h3>Maintenance Hardware</h3>
+            <p>Réparation PC (HP, Lenovo, Fujitsu) et Smartphones. Diagnostic et remplacement de composants.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-archive"></i>
+            <h3>Archivage Numérique</h3>
+            <p>Gestion sécurisée des courriers et documents. Organisation de bases de données.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Développement Web</h3>
+            <p>Création de sites modernes, gestion d'interfaces et programmation Node.js.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Design & Sublimation</h3>
+            <p>Conception de logos et maquettes pour T-shirts et supports de communication.</p>
+        </div>
     </div>
+</div>
 
-    <form>
-        <div class="form-group">
-            <label><i class="fas fa-user"></i> Nom & Prénoms</label>
-            <input type="text" placeholder="Votre nom complet" required>
-        </div>
-
-        <div class="form-group">
-            <label><i class="fas fa-envelope"></i> Email</label>
-            <input type="email" placeholder="exemple@mail.com" required>
-        </div>
-
-        <div class="form-group">
-            <label><i class="fas fa-list"></i> Type de membre</label>
-            <select>
-                <option>Visiteur</option>
-                <option>Professionnel IT</option>
-                <option>Étudiant</option>
-                <option>Partenaire</option>
-            </select>
-        </div>
-
-        <button type="submit">S'ENREGISTRER MAINTENANT</button>
-    </form>
-
-    <div class="footer">
-        © 2026 - Plateforme de Gestion par John Olivier
-    </div>
+<div style="text-align: center;">
+    <p>Besoin de mes services ?</p>
+    <a href="https://wa.me/2250173749438" class="btn">Me contacter sur WhatsApp</a>
 </div>
 
 </body>
