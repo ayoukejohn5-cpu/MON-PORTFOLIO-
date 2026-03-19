@@ -3,76 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Olivier | Portfolio Professionnel 3D</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Plateforme d'Inscription Professionnelle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb; /* Bleu moderne */
+            --bg-color: #f8fafc;
+            --text-dark: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo"><span>J</span>ohn <span>O</span>livier</div>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#projets">Réalisations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="card">
+    <div class="header">
+        <i class="fas fa-user-plus" style="font-size: 40px; color: var(--primary-color); margin-bottom: 10px;"></i>
+        <h1>Formulaire d'Adhésion</h1>
+        <p>Veuillez remplir vos informations personnelles</p>
+    </div>
 
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <div class="profile-frame-3d">
-            </div>
-            <h1>AHISSAN JEAN OLIVE</h1>
-            <p class="subtitle">SD1 Informaticien | FACI - Côte d'Ivoire</p>
-            <p class="description">Expertise en <span>Archivage Numérique</span>, <span>Maintenance Hardware</span> et <span>Design</span>.</p>
-            
-            <div class="contact-links-3d">
-                <a href="https://wa.me/2250173749438" target="_blank" class="btn-3d btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> 01 73 74 94 38
-                </a>
-                <a href="tel:+2250715303686" class="btn-3d btn-call">
-                    <i class="fas fa-phone-alt"></i> 07 15 30 36 86
-                </a>
-            </div>
+    <form>
+        <div class="form-group">
+            <label><i class="fas fa-user"></i> Nom & Prénoms</label>
+            <input type="text" placeholder="Votre nom complet" required>
         </div>
-    </section>
 
-    <section id="projets" class="container">
-        <h2 class="section-title">Mes Réalisations</h2>
-        <div class="grid">
-            
-            <div class="card-3d">
-                <img src="archivage.png" alt="Archivage" class="project-img">
-                <div class="card-info">
-                    <h3>Archivage Numérique</h3>
-                    <p>Gestion sécurisée des courriers EMAT (Arrivée/Départ).</p>
-                </div>
-            </div>
-
-            <div class="card-3d">
-                <img src="repair.png" alt="Docteur Repair" class="project-img">
-                <div class="card-info">
-                    <h3>Docteur Repair</h3>
-                    <p>Diagnostic et réparation hardware professionnelle.</p>
-                </div>
-            </div>
-
-            <div class="card-3d">
-                <img src="design.png" alt="John Design" class="project-img">
-                <div class="card-info">
-                    <h3>John Design</h3>
-                    <p>Sublimation sur T-shirts et peinture personnalisée.</p>
-                </div>
-            </div>
-
+        <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" placeholder="exemple@mail.com" required>
         </div>
-    </section>
 
-    <footer id="contact">
-        <p>© 2026 John Olivier - SD1 Informaticien</p>
-    </footer>
+        <div class="form-group">
+            <label><i class="fas fa-list"></i> Type de membre</label>
+            <select>
+                <option>Visiteur</option>
+                <option>Professionnel IT</option>
+                <option>Étudiant</option>
+                <option>Partenaire</option>
+            </select>
+        </div>
+
+        <button type="submit">S'ENREGISTRER MAINTENANT</button>
+    </form>
+
+    <div class="footer">
+        © 2026 - Plateforme de Gestion par John Olivier
+    </div>
+</div>
 
 </body>
 </html>
