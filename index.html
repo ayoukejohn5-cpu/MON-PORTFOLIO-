@@ -3,59 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Olivier | Expert IT Multiservices</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>John Olivier | Expert IT & Solutions Numériques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; color: #333; }
-        header { background: #1a2a6c; color: white; padding: 60px 20px; text-align: center; }
-        .container { max-width: 1000px; margin: -50px auto 50px; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card i { font-size: 40px; color: #1a2a6c; margin-bottom: 15px; }
-        .card h3 { margin: 10px 0; color: #1a2a6c; }
-        .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #1a2a6c; color: white; border-radius: 5px; text-decoration: none; }
+        :root { --primary: #0f172a; --accent: #3b82f6; --text-light: #f8fafc; --card-bg: #ffffff; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #f1f5f9; color: var(--primary); }
+        
+        /* Header & Navigation */
+        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; color: white; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; }
+        
+        /* Hero Section */
+        .hero { background: var(--primary); color: white; padding: 80px 5%; text-align: center; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; }
+        .hero h1 { font-size: 2.5rem; margin: 0; }
+        .hero p { opacity: 0.9; font-size: 1.1rem; margin-top: 10px; }
+
+        /* Dashboard Grid */
+        .container { max-width: 1200px; margin: -40px auto 50px; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        /* Service Cards */
+        .card { background: var(--card-bg); padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s ease; border: 1px solid #e2e8f0; }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .icon-box { width: 60px; height: 60px; background: #eff6ff; color: var(--accent); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+        .card h3 { margin: 0 0 10px 0; font-size: 1.25rem; }
+        .card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+
+        /* Action Buttons */
+        .btn-group { margin-top: 40px; text-align: center; }
+        .btn { background: var(--accent); color: white; padding: 15px 35px; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn:hover { background: #2563eb; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>AHISSAN JEAN OLIVIER</h1>
-    <p>Spécialiste Informatique | Maintenance | Développement | Design</p>
-</header>
+<nav>
+    <div class="logo">JOHN OLIVIER <span style="color: var(--accent);">IT</span></div>
+    <div class="status"><i class="fas fa-circle" style="color: #22c55e; font-size: 10px;"></i> Disponible</div>
+</nav>
+
+<section class="hero">
+    <h1>Ahissan Jean Olivier</h1>
+    <p>Spécialiste en Maintenance Hardware, Archivage Numérique & Web Design</p>
+</section>
 
 <div class="container">
     <div class="grid">
         <div class="card">
-            <i class="fas fa-tools"></i>
+            <div class="icon-box"><i class="fas fa-laptop-medical"></i></div>
             <h3>Maintenance Hardware</h3>
-            <p>Réparation PC (HP, Lenovo, Fujitsu) et Smartphones. Diagnostic et remplacement de composants.</p>
+            <p>Diagnostic avancé et réparation de PC (HP, Lenovo, Fujitsu) et Smartphones. Optimisation système et hardware.</p>
         </div>
 
         <div class="card">
-            <i class="fas fa-archive"></i>
+            <div class="icon-box"><i class="fas fa-file-shield"></i></div>
             <h3>Archivage Numérique</h3>
-            <p>Gestion sécurisée des courriers et documents. Organisation de bases de données.</p>
+            <p>Mise en place de systèmes de gestion de courriers. Sécurisation et numérisation de documents officiels.</p>
         </div>
 
         <div class="card">
-            <i class="fas fa-code"></i>
+            <div class="icon-box"><i class="fas fa-code"></i></div>
             <h3>Développement Web</h3>
-            <p>Création de sites modernes, gestion d'interfaces et programmation Node.js.</p>
+            <p>Création d'interfaces de gestion modernes avec HTML/CSS, JavaScript et Node.js. Déploiement Cloud.</p>
         </div>
 
         <div class="card">
-            <i class="fas fa-paint-brush"></i>
-            <h3>Design & Sublimation</h3>
-            <p>Conception de logos et maquettes pour T-shirts et supports de communication.</p>
+            <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
+            <h3>Design & Branding</h3>
+            <p>Conception de logos professionnels et maquettes de sublimation pour textile et supports publicitaires.</p>
         </div>
+    </div>
+
+    <div class="btn-group">
+        <a href="https://wa.me/2250173749438" class="btn">
+            <i class="fab fa-whatsapp"></i> DEMANDER UNE EXPERTISE
+        </a>
     </div>
 </div>
 
-<div style="text-align: center;">
-    <p>Besoin de mes services ?</p>
-    <a href="https://wa.me/2250173749438" class="btn">Me contacter sur WhatsApp</a>
-</div>
+<footer style="text-align: center; padding-bottom: 40px; color: #64748b; font-size: 0.9rem;">
+    &copy; 2026 - Développé avec excellence par John Olivier
+</footer>
 
 </body>
 </html>
